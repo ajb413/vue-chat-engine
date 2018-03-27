@@ -7,12 +7,13 @@ Build chat apps with Vue and Vuex using PubNub ChatEngine.
 ## Install
 
 ``` bash
+npm install chat-engine --save
 npm install vue-chat-engine --save
 ```
 
 ## Use in a Vue.js app
 
-Main.js
+**Main.js**
 
 ```javascript
 import Vue from 'vue';
@@ -48,7 +49,7 @@ new Vue({
 ```
 
 
-store.js
+**store.js**
 
 ```javascript
 import Vue from 'vue';

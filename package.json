@@ -1,6 +1,6 @@
 {
   "name": "vue-chat-engine",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "PubNub Chat Engine plugin for vuejs and vuex",
   "main": "dist/build.js",
   "scripts": {
