@@ -42,7 +42,7 @@ new Vue({
   created() {
     const ChatEngine = this.$chatEngine;
     const store = this.$store;
-    ChatEngine.connect(me.uuid, me);
+    // ChatEngine.connect(me.uuid, me);
     // ...
   },
 });
