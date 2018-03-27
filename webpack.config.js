@@ -11,13 +11,13 @@ module.exports = {
     devtool: "source-map",
     plugins: [],
     module: {
-        loaders: [
+        rules: [
             {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                loader: 'babel-loader',
-                query: {
-                    presets: ['es2015']
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                      presets: ['@babel/preset-env']
+                    }
                 }
             }
         ]

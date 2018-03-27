@@ -1,11 +1,10 @@
-import ChatEngineCore from 'chat-engine';
-
 export default class {
-    constructor({ pnConfig, chatEngineConfig, store }) {
-        this.ChatEngine = ChatEngineCore.create(pnConfig, chatEngineConfig);
+    constructor(params) {
 
-        if (store) {
-            this.store = store;
+        this.ChatEngine = params.chatEngine;
+
+        if (params.store) {
+            this.store = params.store;
         }
 
         this.onEvent();
