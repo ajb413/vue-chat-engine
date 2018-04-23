@@ -30,7 +30,7 @@ const chatEngine = ChatEngineCore.create({
   enableSync: true,
 });
 
-// Chat Engine injected into every component instance
+// ChatEngine injected into every component instance
 Vue.use(VueChatEngine, {chatEngine, store});
 
 /* eslint-disable no-new */
