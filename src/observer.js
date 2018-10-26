@@ -11,14 +11,14 @@ export default class {
     }
 
     onEvent() {
-        this.ChatEngine.onAny((event, payload) => {
+        this.ChatEngine.onAny((event, payload, sender) => {
             if (this.store) {
-                this.passToStore('CHATENGINE_' + event, payload);
+                this.passToStore('CHATENGINE_' + event, payload, sender);
             }
         });
     }
 
-    passToStore(event, payload) {
+    passToStore(event, payload, sender) {
         if (!event.startsWith('CHATENGINE_')) {
             return;
         }
@@ -27,7 +27,7 @@ export default class {
             let mutation = namespaced.split('/').pop();
 
             if (mutation === event) {
-                this.store.commit(namespaced, payload);
+                this.store.commit(namespaced, payload, sender);
             }
         }
 
@@ -35,7 +35,7 @@ export default class {
             let action = namespaced.split('/').pop();
 
             if (action === event) {
-                this.store.dispatch(namespaced, payload);
+                this.store.dispatch(namespaced, payload, sender);
             }
         }
     }
